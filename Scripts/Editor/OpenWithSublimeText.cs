@@ -13,7 +13,7 @@ namespace UnitySublime
 		[MenuItem("Assets/Open with Sublime Text", priority = -1000)]
 		static void Open()
 		{
-			string filePath = GetSelectedFilePath();
+			string filePath = string.Format("\"{0}\"", GetSelectedFilePath());
 			Process.Start(applicationPath, filePath);
 		}
 
